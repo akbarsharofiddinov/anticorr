@@ -29,14 +29,14 @@ body {
 /* Header */
 
 header {
-  padding: 35px 0 25px 0;
+  padding: 15px 0;
   z-index: 2;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
 }
 
 header .title {
   color: royalblue;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 header .title-box {
@@ -46,18 +46,18 @@ header .title-box {
 /* Top Description */
 
 .description {
-  padding: 40px 0;
+  padding: 15px 0;
 }
 
 .description .title {
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin-bottom: 10px;
+  font-size: 17px;
 }
 
 .description p {
   margin: 10px 0;
   color: crimson;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* Section Main Content */
@@ -66,7 +66,6 @@ header .title-box {
   display: flex;
   flex-direction: column;
   gap: 45px;
-  margin-bottom: 40px;
 }
 
 /* Every Form */
@@ -74,7 +73,18 @@ header .title-box {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 20px;
+  gap: 10px;
+}
+
+/* Form 2 */
+.section-main_content .form-2 .title {
+  font-size: 18px;
+}
+
+.section-main_content .form-2 .desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
 }
 
 /* Every From Input */
@@ -108,6 +118,11 @@ header .title-box {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 12px;
+}
+
+.section-main_content label {
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /* Load images box */

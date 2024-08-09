@@ -58,14 +58,24 @@ const modal = document.querySelector(".modal");
 const modalInner = document.querySelector(".modal-inner");
 
 sendButton.addEventListener("click", (e) => {
-  console.log("Send button");
-  e.preventDefault();
   modal.classList.add("active");
 });
 
 modal.addEventListener("click", (e) => {
   modal.classList.remove("active");
-  modalInner.addEventListener("click", (e) => {
-    e.stopPropagation();
+});
+
+modalInner.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+// SMS typing
+const inputNumbers = document.querySelectorAll(".input-number");
+
+inputNumbers.forEach((inputNumber) => {
+  inputNumber.addEventListener("input", (e) => {
+    if (e.target.value.length > 1) {
+      e.target.value = e.target.value.slice(0, 1);
+    }
   });
 });

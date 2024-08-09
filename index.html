@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AntiCorr.uz</title>
+    <link rel="stylesheet" href="./src/Styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="title-box">
+          <h1 class="title">Anticorr.uz</h1>
+        </div>
+      </div>
+    </header>
+    <div class="description container">
+      <h1 class="title">Мүрәжат жоллаў</h1>
+      <p>Дыққат! Сизиң жеке мағлыўматлар сыр сақланыўына кепиллик беремиз.</p>
+      <p>Сизиң жиберип атырған мүрәжатыңыз биз ушын үлкен әхмийетке ийе</p>
+    </div>
+
+    <section class="section-main_content container">
+      <form class="form-1">
+        <label for="corruption_condition"> Коррупциялық жағдай </label>
+        <textarea
+          name="corruption_condition"
+          maxlength="500"
+          id="corruption_condition"
+          required
+        ></textarea>
+        <span class="length">0/500</span>
+      </form>
+      <form class="form-2">
+        <div class="full-name_box">
+          <label for="full-name">Фамилия ҳәм атыңыз</label>
+          <input type="text" name="full-name" id="full-name" required />
+        </div>
+        <div class="birthday_box">
+          <label for="birthday">Туўылған сәне</label>
+          <input type="date" name="birthday" id="birthday" required />
+        </div>
+        <div class="location_box">
+          <label for="location">Қала ҳәм район</label>
+          <select name="location" id="location" required>
+            <option value="option-1">Option-1</option>
+          </select>
+        </div>
+        <div class="location2_box">
+          <label for="location2">Анықмәнзилиңиз (мәжбурий емес)</label>
+          <input type="text" name="location2" id="location2" />
+        </div>
+        <div class="phone-number_box">
+          <label for="phone">Телефон номер</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="+998 (__) ___-__-__"
+            autocomplete="off"
+            required
+          />
+        </div>
+      </form>
+      <button class="button-submit">Жибериў</button>
+    </section>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./src/JS/app.js"></script>
+  </body>
+</html>

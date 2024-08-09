@@ -72,10 +72,25 @@ modalInner.addEventListener("click", (e) => {
 // SMS typing
 const inputNumbers = document.querySelectorAll(".input-number");
 
-inputNumbers.forEach((inputNumber) => {
+inputNumbers.forEach((inputNumber, index) => {
   inputNumber.addEventListener("input", (e) => {
     if (e.target.value.length > 1) {
       e.target.value = e.target.value.slice(0, 1);
+    }
+
+    // Move to the next input if the current one is filled
+    if (e.target.value.length === 1 && index < inputNumbers.length - 1) {
+      inputNumbers[index + 1].focus();
+    }
+
+    // Automatically move to the previous input if the user presses backspace
+
+    if (
+      e.target.value === "" &&
+      index > 0 &&
+      e.inputType === "deleteContentBackward"
+    ) {
+      inputNumbers[index - 1].focus();
     }
   });
 });

@@ -37,6 +37,9 @@ header {
 header .title {
   color: royalblue;
   font-size: 20px;
+}
+
+header .title-box {
   text-align: center;
 }
 
@@ -96,6 +99,7 @@ header .title {
   border-radius: 20px;
   font-size: 1.1rem;
   text-align: center;
+  cursor: pointer;
 }
 
 .section-main_content textarea {

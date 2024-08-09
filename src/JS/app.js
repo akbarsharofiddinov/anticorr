@@ -56,9 +56,11 @@ document.addEventListener("click", function (e) {
 const sendButton = document.querySelector(".button-submit");
 const modal = document.querySelector(".modal");
 const modalInner = document.querySelector(".modal-inner");
+const inputNumbers = document.querySelectorAll(".input-number");
 
 sendButton.addEventListener("click", (e) => {
   modal.classList.add("active");
+  inputNumbers[0].focus();
 });
 
 modal.addEventListener("click", (e) => {
@@ -70,9 +72,26 @@ modalInner.addEventListener("click", (e) => {
 });
 
 // SMS typing
-const inputNumbers = document.querySelectorAll(".input-number");
 
 inputNumbers.forEach((inputNumber, index) => {
+  inputNumber.addEventListener("keydown", (e) => {
+    if (e.target.value !== "" && e.key === "Backspace") {
+      e.target.value === "";
+    }
+    if (e.target.value === "" && e.key === "Backspace") {
+      inputNumbers[index - 1].focus();
+    }
+  });
+
+  inputNumber.addEventListener("focus", () => {
+    for (let i = 0; i < index; i++) {
+      if (inputNumbers[i].value === "" && inputNumber.value === "") {
+        inputNumbers[i].focus();
+        break;
+      }
+    }
+  });
+
   inputNumber.addEventListener("input", (e) => {
     if (e.target.value.length > 1) {
       e.target.value = e.target.value.slice(0, 1);
@@ -81,16 +100,6 @@ inputNumbers.forEach((inputNumber, index) => {
     // Move to the next input if the current one is filled
     if (e.target.value.length === 1 && index < inputNumbers.length - 1) {
       inputNumbers[index + 1].focus();
-    }
-
-    // Automatically move to the previous input if the user presses backspace
-
-    if (
-      e.target.value === "" &&
-      index > 0 &&
-      e.inputType === "deleteContentBackward"
-    ) {
-      inputNumbers[index - 1].focus();
     }
   });
 });

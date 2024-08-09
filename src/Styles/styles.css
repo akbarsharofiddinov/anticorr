@@ -15,7 +15,9 @@ body {
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.03);
+  max-width: 320px !important;
+  margin: 0 auto;
 }
 
 .container {
@@ -27,14 +29,15 @@ body {
 /* Header */
 
 header {
-  padding: 35px 0;
+  padding: 35px 0 25px 0;
   z-index: 2;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.02);
 }
 
 header .title {
   color: royalblue;
-  font-size: 28px;
+  font-size: 20px;
+  text-align: center;
 }
 
 /* Top Description */
@@ -45,43 +48,41 @@ header .title {
 
 .description .title {
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .description p {
   margin: 10px 0;
   color: crimson;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 /* Section Main Content */
 
 .section-main_content {
-  padding: 25px 0 40px 0;
-
   display: flex;
   flex-direction: column;
   gap: 45px;
+  margin-bottom: 40px;
 }
 
 /* Every Form */
 .section-main_content form {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 20px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 7px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.06);
 }
 
 /* Every From Input */
 .section-main_content form input,
 .section-main_content form select {
   border: 1px solid #ddd;
+  background-color: #fff;
   padding: 7px 12px;
   width: 100%;
   margin-top: 10px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 15px;
 }
 
@@ -90,16 +91,173 @@ header .title {
   background-color: #0c8b50;
   color: #fff;
   border: none;
-  width: 20%;
   padding: 15px 0;
   border-radius: 20px;
   font-size: 1.1rem;
 }
 
 .section-main_content textarea {
-  height: 200px;
+  height: 150px;
   resize: none;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 12px;
+}
+
+/* Load images box */
+
+.image-load_boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imageLoad-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.imageLoad-box label {
+  cursor: pointer;
+  padding: 20px;
+}
+
+.imageLoad-box label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Custon Select Element */
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.select-selected {
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px !important;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
+  display: none;
+  z-index: 99;
+  border-radius: 8px;
+}
+
+.select-items.show {
+  display: block;
+}
+
+.select-items div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select-items div:hover {
+  background-color: #f1f1f1;
+}
+
+/* Modal & SMS Varification */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-inner {
+  background-color: #fff;
+  max-width: 300px;
+  padding: 40px 20px 20px 20px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal .title {
+  font-size: 20px;
+  color: #0c8b50;
+}
+
+.modal-inner .number-box {
+  text-align: center;
+}
+
+.modal-inner .number-box p:first-child {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.modal-inner .number-box p:last-child {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.modal-inner .input-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-inner .input-boxes input {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.modal-inner .time-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal-inner .time-box p {
+  color: #666;
+}
+
+.modal-inner .time-box span {
+  font-weight: bold;
+}
+
+.modal-inner .button-submit {
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.modal.active {
+  display: flex !important;
 }

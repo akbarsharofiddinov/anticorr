@@ -32,6 +32,56 @@
         <span class="length">0/500</span>
       </form>
       <form class="form-2">
+        <h1 class="title">Тийисли сүўретлер</h1>
+        <p class="desc">Тийисли сүўретлер</p>
+        <div class="image-load_boxes">
+          <div class="imageLoad-box">
+            <label for="image-1">
+              <img src="./src/images/Vector.png" alt="image" />
+            </label>
+            <input
+              type="file"
+              name="image-1"
+              id="image-1"
+              style="display: none"
+            />
+          </div>
+          <div class="imageLoad-box">
+            <label for="image-2">
+              <img src="./src/images/Vector.png" alt="image" />
+            </label>
+            <input
+              type="file"
+              name="image-2"
+              id="image-2"
+              style="display: none"
+            />
+          </div>
+          <div class="imageLoad-box">
+            <label for="image-3">
+              <img src="./src/images/Vector.png" alt="image" />
+            </label>
+            <input
+              type="file"
+              name="image-3"
+              id="image-3"
+              style="display: none"
+            />
+          </div>
+          <div class="imageLoad-box">
+            <label for="image-4">
+              <img src="./src/images/Vector.png" alt="image" />
+            </label>
+            <input
+              type="file"
+              name="image-4"
+              id="image-4"
+              style="display: none"
+            />
+          </div>
+        </div>
+      </form>
+      <form class="form-3">
         <div class="full-name_box">
           <label for="full-name">Фамилия ҳәм атыңыз</label>
           <input type="text" name="full-name" id="full-name" required />
@@ -42,9 +92,15 @@
         </div>
         <div class="location_box">
           <label for="location">Қала ҳәм район</label>
-          <select name="location" id="location" required>
-            <option value="option-1">Option-1</option>
-          </select>
+          <!-- Custom Select -->
+          <div class="custom-select">
+            <div class="select-selected">No selected</div>
+            <div class="select-items">
+              <div>Option 1</div>
+              <div>Option 2</div>
+              <div>Option 3</div>
+            </div>
+          </div>
         </div>
         <div class="location2_box">
           <label for="location2">Анықмәнзилиңиз (мәжбурий емес)</label>
@@ -64,6 +120,28 @@
       </form>
       <button class="button-submit">Жибериў</button>
     </section>
+
+    <div class="modal sms-varification">
+      <div class="modal-inner">
+        <h1 class="title">Смс кодты тастыйықланг</h1>
+        <div class="number-box">
+          <p>+998 90 000-00-00</p>
+          <p>Бул номерге тастыйықлаў коды жиберилди</p>
+        </div>
+        <div class="input-boxes">
+          <input type="number" name="numb1" id="numb1" max="9" min="0" />
+          <input type="number" name="numb2" id="numb2" max="9" min="0" />
+          <input type="number" name="numb3" id="numb3" max="9" min="0" />
+          <input type="number" name="numb4" id="numb4" max="9" min="0" />
+          <input type="number" name="numb5" id="numb5" max="9" min="0" />
+        </div>
+        <div class="time-box">
+          <p>Қайта жибериўге қалды</p>
+          <span class="time-count">00:45</span>
+        </div>
+        <button class="button-submit">Тастыйықлаў</button>
+      </div>
+    </div>
 
     <script src="https://unpkg.com/imask"></script>
     <script src="./src/JS/app.js"></script>

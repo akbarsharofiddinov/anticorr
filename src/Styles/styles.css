@@ -87,6 +87,7 @@ header .title {
 }
 
 /* Submit Button */
+.section-main_content .link,
 .button-submit {
   background-color: #0c8b50;
   color: #fff;
@@ -94,6 +95,7 @@ header .title {
   padding: 15px 0;
   border-radius: 20px;
   font-size: 1.1rem;
+  text-align: center;
 }
 
 .section-main_content textarea {

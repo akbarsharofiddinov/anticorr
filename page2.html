@@ -21,68 +21,44 @@
     </div>
 
     <section class="section-main_content container">
-      <form class="form-1">
-        <label for="corruption_condition"> Коррупциялық жағдай </label>
-        <textarea
-          name="corruption_condition"
-          maxlength="500"
-          id="corruption_condition"
-          required
-        ></textarea>
-        <span class="length">0/500</span>
-      </form>
-      <form class="form-2">
-        <h1 class="title">Тийисли сүўретлер</h1>
-        <p class="desc">Тийисли сүўретлер</p>
-        <div class="image-load_boxes">
-          <div class="imageLoad-box">
-            <label for="image-1">
-              <img src="./src/images/Vector.png" alt="image" />
-            </label>
-            <input
-              type="file"
-              name="image-1"
-              id="image-1"
-              style="display: none"
-            />
-          </div>
-          <div class="imageLoad-box">
-            <label for="image-2">
-              <img src="./src/images/Vector.png" alt="image" />
-            </label>
-            <input
-              type="file"
-              name="image-2"
-              id="image-2"
-              style="display: none"
-            />
-          </div>
-          <div class="imageLoad-box">
-            <label for="image-3">
-              <img src="./src/images/Vector.png" alt="image" />
-            </label>
-            <input
-              type="file"
-              name="image-3"
-              id="image-3"
-              style="display: none"
-            />
-          </div>
-          <div class="imageLoad-box">
-            <label for="image-4">
-              <img src="./src/images/Vector.png" alt="image" />
-            </label>
-            <input
-              type="file"
-              name="image-4"
-              id="image-4"
-              style="display: none"
-            />
+      <form class="form-3">
+        <div class="full-name_box">
+          <label for="full-name">Фамилия ҳәм атыңыз</label>
+          <input type="text" name="full-name" id="full-name" required />
+        </div>
+        <div class="birthday_box">
+          <label for="birthday">Туўылған сәне</label>
+          <input type="date" name="birthday" id="birthday" required />
+        </div>
+        <div class="location_box">
+          <label for="location">Қала ҳәм район</label>
+          <!-- Custom Select -->
+          <div class="custom-select">
+            <div class="select-selected">No selected</div>
+            <div class="select-items">
+              <div>Option 1</div>
+              <div>Option 2</div>
+              <div>Option 3</div>
+            </div>
           </div>
         </div>
+        <div class="location2_box">
+          <label for="location2">Анықмәнзилиңиз (мәжбурий емес)</label>
+          <input type="text" name="location2" id="location2" />
+        </div>
+        <div class="phone-number_box">
+          <label for="phone">Телефон номер</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="+998 (__) ___-__-__"
+            autocomplete="off"
+            required
+          />
+        </div>
       </form>
-      
-      <a href="./page2.html" class="link">Жибериў</button>
+      <button class="button-submit">Жибериў</button>
     </section>
 
     <div class="modal sms-varification">

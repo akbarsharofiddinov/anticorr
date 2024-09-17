@@ -1,16 +1,16 @@
 // Phone number input
-const phoneInput = document.getElementById("phone");
-phoneInput.addEventListener("focus", (e) => {
-  e.target.value = "+998 (__) ___-__-__";
-  setTimeout(() => {
-    phoneInput.setSelectionRange(6, 6);
-  }, 10);
+// const phoneInput = document.getElementById("phone");
+// phoneInput.addEventListener("focus", (e) => {
+//   e.target.value = "+998 (__) ___-__-__";
+//   setTimeout(() => {
+//     phoneInput.setSelectionRange(6, 6);
+//   }, 10);
 
-  IMask(phoneInput, {
-    mask: "+{998} (00) 000-00-00",
-    lazy: false,
-  });
-});
+//   IMask(phoneInput, {
+//     mask: "+{998} (00) 000-00-00",
+//     lazy: false,
+//   });
+// });
 
 // Custon Select Element
 document

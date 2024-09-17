@@ -48,14 +48,16 @@
         </div>
         <div class="phone-number_box">
           <label for="phone">Телефон номер</label>
-          <input
-            type="tel"
-            name="phone"
-            id="phone"
-            placeholder="+998 (__) ___-__-__"
-            autocomplete="off"
-            required
-          />
+          <div class="input-box">
+            <button>+998</button>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              autocomplete="off"
+              required
+            />
+          </div>
         </div>
       </form>
       <button class="button-submit">Жибериў</button>
@@ -110,7 +112,9 @@
           <p>Қайта жибериўге қалды</p>
           <span class="time-count">00:45</span>
         </div>
-        <button class="button-submit" id="sms-varification-btn">Тастыйықлаў</button>
+        <button class="button-submit" id="sms-varification-btn">
+          Тастыйықлаў
+        </button>
       </div>
     </div>
 

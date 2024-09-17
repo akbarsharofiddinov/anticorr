@@ -193,6 +193,25 @@ header .title-box {
   background-color: #f1f1f1;
 }
 
+.phone-number_box .input-box {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.phone-number_box .input-box button {
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  padding: 0 4px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+}
+
+.phone-number_box .input-box input {
+  margin: 0;
+}
+
 /* Modal & SMS Varification */
 .modal {
   position: fixed;

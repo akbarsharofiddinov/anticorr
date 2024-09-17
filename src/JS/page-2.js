@@ -85,3 +85,20 @@ inputNumbers.forEach((inputNumber, index) => {
     }
   });
 });
+
+const smsVarificationBtn = document.querySelector("#sms-varification-btn");
+smsVarificationBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const smsModal = document.querySelector(".sms-varification");
+  if (smsModal.classList.contains("modal")) {
+    smsModal.classList.remove("active");
+    document.querySelector(".sent-information").classList.add("active");
+  } else {
+    document.querySelector(".sent-information").classList.remove("active");
+  }
+});
+
+const closeButton = document.querySelector("#sent-info-modal-close");
+closeButton.addEventListener("click", (e) => {
+  document.querySelector(".sent-information").classList.remove("active");
+});

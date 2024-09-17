@@ -282,3 +282,56 @@ input::-webkit-inner-spin-button {
 .modal.active {
   display: flex !important;
 }
+
+/* Sent Information Modal */
+
+.sent-information.modal .title {
+  text-align: center;
+  font-size: 18px;
+}
+
+.sent-information.modal .desc {
+  font-size: 16px;
+  color: #6b798a;
+  text-align: center;
+}
+
+.sent-information.modal button {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #0c8b50;
+  border: none;
+  color: #fff;
+  border-radius: 15px;
+  padding: 15px 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.sent-information.modal button p span:first-child {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.sent-information.modal .modal-inner {
+  position: relative;
+}
+
+.sent-information.modal .close-modal-btn {
+  position: absolute;
+  background-color: #fff;
+  font-size: 34px;
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  cursor: pointer;
+}
